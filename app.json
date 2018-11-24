@@ -1,13 +1,36 @@
-  {
-  "pages":[
+{
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/feedback/feedback",
+    "pages/business/business",
+    "pages/tools/tools"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1aad19",
+    "navigationBarTitleText": "远程速查",
+    "navigationBarTextStyle": "write"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "/img/home_s.png"
+      },
+      {
+        "pagePath":"pages/tools/tools",
+        "text":"Tools"
+      },
+      {
+        "pagePath": "pages/feedback/feedback",
+        "text": "意见&反馈",
+        "iconPath": "img/feedback.png",
+        "selectedIconPath": "/img/feedback_s.png"
+      }
+    ]
   },
   "cloud": true
 }

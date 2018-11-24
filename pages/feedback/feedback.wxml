@@ -1,0 +1,17 @@
+<view class="weui-article">
+            <view class="weui-article__h1">关于远程速查</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__p">本人通过业余时间完成的这个小程序，希望能给大家带来便利，但由于只有我一个人维护，还有许多不完善的地方，希望大家提供好的建议来完善功能，以方便我们的工作。收到的留言将于每周末进行处理。</view>
+                </view>
+              </view>
+</view>
+<view class="button-sp-area">
+  <button class="weui-btn" open-type="contact" >点我留言反馈建议</button>
+</view>
+
+
+
+<view class="feed_ad">
+<ad unit-id="adunit-010ca17482ca4bad"></ad>
+</view>

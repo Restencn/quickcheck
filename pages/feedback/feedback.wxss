@@ -1,0 +1,5 @@
+.feed_ad{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
