@@ -1,17 +1,44 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-<form bindsubmit="formSubmit">
+<view class="page">
+  <view class="bg">
+    <view class="page__hd"><image src="/img/logo.png" mode="aspectFit"></image></view>
+    <form bindsubmit="formSubmit">
+      <view class="id_form">
+        <input class="id_input" focus='ture' name="id" placeholder="交易代码" type='text' confirm-type='search' bindconfirm='formSubmit' value="{{id}}"/>
+        <button class="id_button" formType="submit">查询</button>
+      </view>
+       
+     </form>
+   </view>
+
+
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{name}}</view>
+                    <view class="weui-form-preview__value_in-hd">{{code}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd" hidden="{{note_hidden}}">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{note_title}}<view class="weui-badge" style="margin-left: 5px;">重要</view></view>
+                    
+                    <view class="weui-form-preview__value" >{{note}}</view>
+                </view>
+            </view>
+        </view>
+
+
+
+
+
+
 <view class="section">
-  <input name="id" placeholder="在此输入交易编号" auto-focus/>
-  <button type="primary" formType="submit"> 查询 </button>
   <text class="body-view">{{text}}</text>
 </view>
-</form>
+
+
+  <view class="weui-footer">
+      <view class="weui-footer__text">孝昌支行；数据来源：湖北分行全功能银行系统交易授权操作指引</view>
+  </view>
 </view>

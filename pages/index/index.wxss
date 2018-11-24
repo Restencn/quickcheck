@@ -1,26 +1,55 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.page__hd{
+  text-align:center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.page__hd>image{
+  width: 100px;
+  height: 125px;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.section{
+  padding:20px;
 }
-
-.usermotto {
-  margin-top: 200px;
+.weui-form-preview{
+  padding:0px 0px 0px 0px;
 }
-.inputtext{
-  border-color:#000;
-  border-width:1px;
+.bg{
+  background: #1aad19;
+  color: #fff;
+}
+.weui-btn-area{
+  padding-bottom: 20px;
+}
+.id_input{
+  margin: 20px 0px 20px 0px;
+  padding:0px 0px 0px 50px;
+  border-radius: 50px;
+  background: #fff;
+  color:black;
+  height: 60px;
+  display: inline-block;
+  text-align: left;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+}
+.id_button{
+  height: 60px;
+  line-height:3.25;
+  display: inline-block;
+  width: 100px;
+  margin: 20px 0px;
+  position: relative;
+  text-align: center;
+  border-radius: 50px;
   border-style:solid;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-width: 0px;
+  background: #b7fcb7;
+  color: #1aad19;
+}
+.id_button::after{
+  border: none;
+}
+.id_form{
+  text-align: center;
 }
