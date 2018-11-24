@@ -6,29 +6,60 @@ wx.cloud.init({
   env: 'cx-0b000a'
 })
 const db = wx.cloud.database({ env: 'cx-0b000a' })
-const sj = db.collection('sj')
+const nsj = db.collection('nsj')
 var cxid
 Page({
   data: {
-    motto: 'Hello World',
-    hello: '123',
-    text: '开始查询吧1',
+    name: '',
+    code: '',
+    text: '',
+    note:'',
+    note_title:'',
+    note_hidden:true,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
   formSubmit: function (e) {
-    cxid = e.detail.value.id
-    cxid=Number(cxid)
-    console.log(cxid)
-    sj.where({id: cxid,}).get({
+    
+    if (e.detail.value.id != null){
+      cxid = e.detail.value.id
+      
+    }
+    else if(e.detail.value.id==null && e.detail.value!=null){
+      cxid = e.detail.value
+      
+    }
+    cxid = Number(cxid)
+    this.setData({code:cxid})
+    nsj.where({id: cxid,}).get({
         success: res => {
+          console.log(res.data[0])
+          if (res.data[0] ==null) {
+            wx.showModal({
+              content: '暂未收录该笔交易',
+              showCancel: false
+            })}
+          else {
           this.setData({
-            text: res.data[0].need
+            text: res.data[0].need,
+            name:res.data[0].name,
           })
+          if(res.data[0].note!=''){
+            this.setData({
+              note_title:'注意事项',
+              note:res.data[0].note,
+              note_hidden:false
+            })
+          }
+          else{this.setData({note_hidden:true})}
+          }
         }
+
       })
   },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
