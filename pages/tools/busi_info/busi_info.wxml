@@ -1,0 +1,2 @@
+<!--pages/tools/busi_info/busi_info.wxml-->
+<web-view src="https://www.gsxt.gov.cn/index.html"></web-view>

@@ -1,11 +1,11 @@
-// pages/tools/tools.js
+// pages/tools/busi_info/busi_info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    grids: [0]
+
   },
 
   /**

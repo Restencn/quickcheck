@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/feedback/feedback",
     "pages/business/business",
-    "pages/tools/tools"
+    "pages/tools/tools",
+    "pages/tools/busi_info/busi_info"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,10 +20,6 @@
         "text": "首页",
         "iconPath": "img/home.png",
         "selectedIconPath": "/img/home_s.png"
-      },
-      {
-        "pagePath":"pages/tools/tools",
-        "text":"Tools"
       },
       {
         "pagePath": "pages/feedback/feedback",
